@@ -1,0 +1,1 @@
+window.alert('Leo não era o impostor')
