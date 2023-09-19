@@ -5,6 +5,11 @@
 {% block body %}
     <h1>Enquetes</h1>
 {% for question in questions %}
+
+{% if question.was_published_recently %}
+    <span class="badge bg-success">New!</span>
+{% endif %}
+
 <a href='{% url 'question' question.id %}'>{{ question.question_text }} ({{question.pubdate}})</a><br> 
 {% endfor %}
 
